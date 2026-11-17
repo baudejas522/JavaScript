@@ -137,19 +137,174 @@ for(let i = 0; i < students.length; i++)
 
     */
 
-function SleepIn(weekday, vacation)
-{
-    if(!weekday || vacation)
-        {
-            return true;
-        }
-}
+// function SleepIn(weekday, vacation)
+// {
+//     if(!weekday || vacation)
+//         {
+//             return true;
+//         }
+// }
 
-console.log(SleepIn(false, false));
-console.log(SleepIn(true, false));
-console.log(SleepIn(false, true));
-
-
+// console.log(SleepIn(false, false));
+// console.log(SleepIn(true, false));
+// console.log(SleepIn(false, true));
 
 
 
+// setTimeout(function ()
+// {
+//     alert("reklama");
+// }, 3000);
+
+// const countAverage = (...grades) =>
+//     {
+//         //sudeti
+//         let sum = 0
+
+//         for(let i = 0; i < grades.length; i++)
+//             {
+//                 sum += grades[i]
+//             }
+//         //padalinti is pazymiu skaiciuas
+//         return Math.round(sum / grades.length)
+//     }
+
+// console.log(countAverage(10,7,8,9,8,7))
+
+// const findNumber = (target, ...number) =>
+//     {
+//         console.log(number)
+//         for(let i = 0; i < number.length; ++i)
+//             {
+//                 if(target === number[i])
+//                     {
+//                         return number.indexOf(target);
+//                         break;
+//                     }
+//                 else
+//                     {
+//                         return -1
+//                     }
+//             }
+//     } 
+//     console.log(findNumber(27, ))
+
+
+
+// const countWordsStartingWtih = (letter, ...words) =>
+//     {
+//         let sum = 0
+//         for(let i = 0; i < words.length; i++)
+//             {
+//                 console.log(words[i][0].toLowerCase())
+//                 if(words[i][0].toLowerCase() === letter)
+//                     {
+//                         sum ++
+//                         continue;
+//                     }
+                    
+//                 }
+//                 return sum
+//     }
+//     console.log(countWordsStartingWtih("j", "Java", "javascript", "Python", "JSON", "HTML"));
+    
+
+// const countEvenNumbers = (...numbers) =>
+// {
+//     let sum = 0
+    
+//     for(let i = 0; i < numbers.length; i++)
+//         {
+//             if(numbers[i] % 2 === 0)
+//                 {
+//                     sum ++
+//                 }
+//         }
+//     return sum
+// }
+
+// console.log(countEvenNumbers(3, 8, 12, 5, 7, 20))
+
+// const getRandom = (max) =>
+//     {
+//         return Math.floor(Math.random() * max)
+//     }
+// console.log(getRandom(100)) //Math 
+
+// const getDate = () =>
+//     {
+//         const date = new Date();
+
+//         const newDate = new Date(date).setFullYear(2027);
+//         return new Date(newDate).getUTCFullYear() // grazinam date objekto date
+//     }
+
+// console.log(getDate())  
+
+// const checkName = (name, names) =>
+//     {
+//         if(names.includes(name))
+//             {
+//                 return `Surasta: ${name}`;
+//             }
+//         else
+//             {
+//                 return "Not found"
+//             }
+//     }  
+
+//     console.log(checkName("Justina", ["Rokas", "Martynas", "Matas", "Justina"]));
+
+
+// const toArrConverter = (text) =>
+//     {
+//         return text.split(":");
+//     }
+
+// const toStringConverter = (array) =>
+//     {
+//         return array.join(",")
+//     }
+
+//     console.log(toArrConverter("Labas: rytas: suraitytas"))
+//     console.log(toStringConverter(["Andrius", "Ieva"]))
+
+const countWordsContaining = (searchText, ...words) =>
+    {
+        let count = 0;
+
+        for(let i = 0; i < words.length; i++)
+            {
+                if(words[i].toLowerCase().includes(searchText))
+                {
+                    count ++
+                }
+            }
+            return count
+            
+    }
+
+console.log(countWordsContaining("script", "JavaScript", "Python", "Java", "TypeScript"));
+
+
+// const findImageFiles = (...fileNames) =>
+//     {
+//         for(let i = 0; i < fileNames.length; i++)
+//             {
+//                 if(fileNames[i].endsWith(".png") || fileNames[i].endsWith(".jpg"))
+//                 {
+//                     return fileNames
+//                 }
+//             }
+//     }
+
+//     console.log(findImageFiles(["logo.PNG", "notes.txt", "photo.jpg", "image.svg"]))
+
+
+const findEmailsFromDomain = (domain, ...emails) =>
+    {
+        for(let i = 0; i < emails.length; i++)
+            {
+                if(emails[i])
+            }
+    }
