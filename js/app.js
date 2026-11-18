@@ -266,10 +266,11 @@ for(let i = 0; i < students.length; i++)
 //         return array.join(",")
 //     }
 
-//     console.log(toArrConverter("Labas: rytas: suraitytas"))
+// //     console.log(toArrConverter("Labas: rytas: suraitytas"))
 //     console.log(toStringConverter(["Andrius", "Ieva"]))
 
-const countWordsContaining = (searchText, ...words) =>
+const words = ["JavaScript", "Python", "Java", "TypeScript"];
+const countWordsContaining = (searchText, words) =>
     {
         let count = 0;
 
@@ -284,27 +285,44 @@ const countWordsContaining = (searchText, ...words) =>
             
     }
 
-console.log(countWordsContaining("script", "JavaScript", "Python", "Java", "TypeScript"));
+console.log(countWordsContaining("script", words));
 
-
-// const findImageFiles = (...fileNames) =>
-//     {
-//         for(let i = 0; i < fileNames.length; i++)
-//             {
-//                 if(fileNames[i].endsWith(".png") || fileNames[i].endsWith(".jpg"))
-//                 {
-//                     return fileNames
-//                 }
-//             }
-//     }
-
-//     console.log(findImageFiles(["logo.PNG", "notes.txt", "photo.jpg", "image.svg"]))
-
-
-const findEmailsFromDomain = (domain, ...emails) =>
+const files = ["logo.PNG", "notes.txt", "photo.jpg", "image.svg"];
+const findImageFiles = (fileNames) =>
     {
+        let names = []
+
+        for(let i = 0; i < fileNames.length; i++)
+            {
+                if(fileNames[i].toLowerCase().endsWith(".png") || fileNames[i].toLowerCase().endsWith(".jpg"))
+                {
+                    names += fileNames[i] + " "
+                }
+            }
+            return names
+    }
+
+    console.log(findImageFiles(files))
+
+
+const emails = [
+  " ona@kitm.lt ",
+  "jonas@example.com",
+  " ieva@kitm.lt"
+];
+
+const findEmailsFromDomain = (domain, emails) =>
+    {
+        let email = []
+
         for(let i = 0; i < emails.length; i++)
             {
-                if(emails[i])
+                if(emails[i].trim().endsWith(domain))
+                    {                     
+                        email += emails[i]
+                    }
             }
+            return email.trim()
     }
+
+    console.log(findEmailsFromDomain("kitm.lt", emails))
